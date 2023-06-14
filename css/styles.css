@@ -6,6 +6,7 @@
     --active-link-color: #FFFFFF;
     --text-color-paragraf: #434455; 
     --background-color: #F4F4FD;
+    --color: #8e8f99;
 }
 
 body {
@@ -41,6 +42,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 .header {
     border-bottom: 1px solid #e7e9fc; 
+    box-shadow: зі значенням 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08); 
 }
 .header-container {
     display: flex;
@@ -78,6 +80,19 @@ p, h1, h2, h3, h4, h5, h6 {
     color:var(--primary-text-color);
     display: block;
     padding: 24px 0;
+    position: relative;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
+}
+.header-menu-link::after {
+    content: '';
+    position: absolute; 
+    left: 0;
+    bottom: -1px;
+    height: 4px;
+    background-color: #404bbf;
+    border-radius: 2px;
+
 }
 .header-menu-list {
     display: flex;
@@ -226,6 +241,14 @@ p, h1, h2, h3, h4, h5, h6 {
     color: var(--background-color);
     max-width: 264px;
 }
+.footer-digital-main {
+    font-weight:  500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color:#FFFFFF;
+    margin-bottom: 16px; 
+}
 .section-title {
     font-weight: 700;
     font-size: 56px;
@@ -257,6 +280,7 @@ p, h1, h2, h3, h4, h5, h6 {
     display: block;
     margin: auto;
     min-width: 169px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 .section-title-bt:hover, 
@@ -267,19 +291,17 @@ p, h1, h2, h3, h4, h5, h6 {
 .section-content-one {
     padding: 120px 0;
 
+
 }
 .section-content {
     padding: 188px 0;
     background-color: #2E2F42;
-    background-image: linear-gradient(
-        to bottom, 
-        rgba(46, 47, 66, 0.7), 
-        rgba(46, 47, 66, 0.7)
-    ),
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
 url(../images/people-offiсe.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+
 
 }
 .main-strategy-title {
@@ -295,22 +317,26 @@ url(../images/people-offiсe.jpg);
     line-height: 1.5;
     letter-spacing: 0.02em;
 }
-.main-content-icon::before {
+
+.main-content-div {
     display: flex;
     max-width: 1128px;
     gap: 24px;
+    align-items: center;
+    justify-content: center;
+    height: 112px;
+    background-color: #f4f4fd; 
+    border-radius: 4px;
+    margin-bottom: 8px;
 }
 .main-content-icon {
     margin-bottom: 8px;
 }
-.comand-title-icons::before {
-    display: flex; 
-    max-width: 232px;
-    gap: 24px;
-}
+
+
 .comand-title-icons {
     margin-top: 8px;
-
+    fill: var(--background-color)
 }
 .technologies-title {
     font-weight: 700;
@@ -381,24 +407,68 @@ url(../images/people-offiсe.jpg);
     width: calc((100%-72)/4);
     text-align: center; 
     border-radius: 0px 0px 4px 4px;
+    box-shadow:  0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .team-title-icone {
     border: 1px solid #8E8F99;
 border-radius: 4px;
-
+padding: 32px 0;
 }
 .name {
     padding: 32px 16px;
 
 }
+.list-comand {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
 .footer-digital-list {
     display: flex;
+    gap: 16px;
+}
+.footer-digital-item {
+    width: 40px;
+    height: 40px;
+}
+.footer-digital-link {
+    width: 100%;
+    height: 100%;
+    background-color: 
+    color: var(var(--pramary-accent-color));
+    border-radius: 50%;
+    display: flex; 
     align-items: center;
-    gap: 16px; 
+    justify-content: center;
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+.footer-digital-link:hover ,
+.footer-digital-link:focus {
+    background-color: #31d0aa;  
+}
+
+.list-comand-item {
+    width: 40px;
+    height: 40px;
+}
+.list-comand-link {
+    width: 100%;
+    height: 100%;
+    background-color: var(--pramary-accent-color);
+    border-radius: 50%;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+.list-comand-link:hover , 
+.list-comand-link:focus {
+    background-color: #404bbf; 
 }
 .footer-svg {
     width: 40px;
     height: 40px;
+    fill: var(--background-color);
 }
 
 .comand-title {
@@ -428,6 +498,27 @@ border-radius: 4px;
     margin-bottom: 72px;
     margin-top: 120px;
     margin-bottom: 72px;
+
+}
+
+.team-title-link {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #8e8f99;
+    border-radius: 4px;
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+    color: var(--color);
+}
+.team-title-link:hover ,
+.team-title-link:focus {
+    border-color: #404bbf;
+}
+.team-title-icone {
+    width: calc((100% - 120px) / 6);
+    height: 88px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .customers-list-icont {
     display: flex;
@@ -435,6 +526,7 @@ border-radius: 4px;
     justify-content: center;
     align-items: center;
     padding: 16px 32px;
+    fill: currentColor;
 }
 .customers {
     padding: 120px 0;
@@ -444,6 +536,14 @@ border-radius: 4px;
 .footer {
     background-color: #2e2f42;
     padding: 100px 0;
+}
+.footer-main {
+    display: flex;
+    align-items: baseline;
+}
+.footer-1 {
+    margin-right: 120px;
+
 }
 .visually-hidden {
     position: absolute; 
