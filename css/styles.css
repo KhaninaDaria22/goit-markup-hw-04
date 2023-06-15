@@ -51,7 +51,18 @@ p, h1, h2, h3, h4, h5, h6 {
     align-items: center;
 
 }
+.c {
+    position: relative;
 
+}
+.current::after {
+    content:'';
+    width: 100%;
+    height: 100%;
+    background-color: #404BBF;
+    position: absolute;
+
+}
 .header-logo {
     font-family: "Raleway", sans-serif;
     font-weight: 800;
@@ -307,6 +318,7 @@ url(../images/people-offiсe.jpg);
     background-size: cover;
     background-position: center;
     max-width: 1440px; 
+    margin: 0;
 
 
 }
@@ -325,23 +337,35 @@ url(../images/people-offiсe.jpg);
 }
 
 .main-content-div {
-    display: flex;
-    max-width: 1128px;
-    gap: 24px;
-    align-items: center;
-    justify-content: center;
-    height: 112px;
-
-    margin-bottom: 8px;
 }
 .main-content-icon {
     margin-bottom: 8px;
 }
+.main-content-div-two {
+    background-color: #F4F4FD;
 
-
+}
+.content-div-block {
+    position: absolute;
+    background-color: #4D5AE5;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transform: translateY(100%);
+}
+.content-div-block-tex {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.37;
+    letter-spacing: 0.02em;
+    color: #F4F4FD;
+    
+}
+.content-div-two {
+    position: relative;
+}
 .comand-title-icons {
-    margin-top: 8px;
-    fill: var(--background-color)
+    fill: var(--background-color);
 }
 .technologies-title {
     font-weight: 700;
@@ -379,6 +403,8 @@ url(../images/people-offiсe.jpg);
     gap: 24px;
     padding-left: 0px;
     padding-right: 0px;
+    align-items: center;
+    justify-content: center;
    
 }
 .main-strategi-item {
@@ -414,11 +440,7 @@ url(../images/people-offiсe.jpg);
     border-radius: 0px 0px 4px 4px;
     box-shadow:  0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
-.team-title-icone {
-    border: 1px solid #8E8F99;
-border-radius: 4px;
-padding: 32px 0;
-}
+
 .name {
     padding: 32px 16px;
 
@@ -473,8 +495,6 @@ padding: 32px 0;
     background-color: #404bbf; 
 }
 .footer-svg {
-    width: 40px;
-    height: 40px;
     fill: var(--background-color);
 }
 
@@ -509,14 +529,13 @@ padding: 32px 0;
 }
 
 .team-title-link {
-    width: 100%;
-    height: 100%;
     border: 1px solid #8e8f99;
     border-radius: 4px;
     display: flex; 
     align-items: center;
     justify-content: center; 
-    color: var(--color);
+    color: #8E8F99;
+
 }
 .team-title-link:hover {
     border-color: #404bbf;
@@ -528,8 +547,10 @@ padding: 32px 0;
 .team-title-icone {
     width: calc((100% - 120px) / 6);
     height: 88px;
-    transition: border-color 
-    250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-color; 
+    border-radius: 4px;
+    padding: 32px 0;
+    
 }
 .customers-list-icont {
     display: flex;
@@ -538,6 +559,9 @@ padding: 32px 0;
     align-items: center;
     padding: 16px 32px;
     fill: currentColor;
+}
+.customers-list-icon {
+    
 }
 .customers {
     padding: 120px 0;
@@ -584,6 +608,10 @@ padding: 32px 0;
     height: 100%;
     background-color: rgba(46, 47, 66, 0.4);
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+.backdrop.is-hidden .modal {
+    transform: transletate (-50%, -50%) scale (0);
 }
 .is-hidden {
     opacity: 0;
@@ -595,15 +623,17 @@ padding: 32px 0;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scaleX(1);
     width: 408px; 
     min-height: 584px; 
     background: #fcfcfc;
-    box-shadow: зі значенням 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 .modal-btn {
+    position: absolute;
     top: 24px;
     right: 24px; 
     width: 24px;
@@ -618,6 +648,11 @@ padding: 32px 0;
     cursor: pointer;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 
+}
+.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
 }
 .modal-btn:hover {
     background-color: #404bbf;
