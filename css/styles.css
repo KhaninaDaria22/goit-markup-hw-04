@@ -515,7 +515,7 @@ url(../images/img-name.jpg);
 .list-comand-item {
     width: 40px;
     height: 40px;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 .list-comand-link {
     width: 100%;
@@ -525,6 +525,7 @@ url(../images/img-name.jpg);
     display: flex; 
     align-items: center;
     justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .list-comand-link:hover {
     background-color: #404bbf; 
@@ -576,6 +577,7 @@ url(../images/img-name.jpg);
     color: #8E8F99;
     height: 100%;
     width: 100%;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
 
 }
@@ -585,6 +587,7 @@ url(../images/img-name.jpg);
 }
 .team-title-link:hover {
     border-color: #404bbf;
+    color: #404bbf;
 }
 .team-title-link:focus {
     border-color: #404bbf;
@@ -601,7 +604,6 @@ url(../images/img-name.jpg);
     gap: 24px; 
     justify-content: center;
     align-items: center;
-    padding: 16px 32px;
     fill: currentColor;
 }
 .customers-list-icon {
