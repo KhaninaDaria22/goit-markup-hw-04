@@ -8,7 +8,6 @@
     --background-color: #F4F4FD;
     --color: #8e8f99;
 }
-
 body {
     font-family: 'Roboto', sans-serif;
     color:  var(--text-color-paragraf); 
@@ -475,7 +474,6 @@ url(../images/img-name.jpg);
     border-radius: 0px 0px 4px 4px;
     box-shadow:  0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
-
 .name {
     padding: 32px 0px;
 
@@ -498,12 +496,12 @@ url(../images/img-name.jpg);
     width: 100%;
     height: 100%;
     background-color: var(--pramary-accent-color);
-    color: var(var(--pramary-accent-color));
+    color: var(--pramary-accent-color);
     border-radius: 50%;
     display: flex; 
     align-items: center;
     justify-content: center;
-
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-digital-link:hover {
     background-color: #31d0aa;  
@@ -578,8 +576,7 @@ url(../images/img-name.jpg);
     height: 100%;
     width: 100%;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    
-
+    border-color: 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-div-logo {
     margin-right: 120px;
@@ -657,7 +654,7 @@ url(../images/img-name.jpg);
 
 }
 .backdrop.is-hidden .modal {
-    transform: transletate (-50%, -50%) scale (0);
+    transform: transletate(-50%, -50%) scale(0);
 }
 .is-hidden {
     opacity: 0;
