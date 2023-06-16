@@ -501,7 +501,7 @@ url(../images/img-name.jpg);
     display: flex; 
     align-items: center;
     justify-content: center;
-    transition:  border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition:  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 .footer-digital-link:hover {
     background-color: #31d0aa;  
@@ -575,8 +575,8 @@ url(../images/img-name.jpg);
     color: #8E8F99;
     height: 100%;
     width: 100%;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    border-color: 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+    
 }
 .footer-div-logo {
     margin-right: 120px;
